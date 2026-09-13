@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Swan Store | Fashion & Lifestyle</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="logo">
+            THE SWAN
+        </div>
+
+        <nav class="nav">
+
+            <a href="#home">Trang chủ</a>
+            <a href="#shop">Sản phẩm</a>
+            <a href="#collection">Bộ sưu tập</a>
+            <a href="#about">Về chúng tôi</a>
+            <a href="#contact">Liên hệ</a>
+
+        </nav>
+
+        <div class="header-right">
+
+            <button class="search-btn" onclick="openSearch()">
+                🔍
+            </button>
+
+            <button class="cart-btn" onclick="openCart()">
+                🛒
+                <span id="cart-count">0</span>
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= SEARCH ================= -->
+
+    <div class="search-box" id="searchBox">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Tìm kiếm sản phẩm..."
+            onkeyup="searchProducts()"
+        >
+
+        <button onclick="closeSearch()">✕</button>
+
+    </div>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <p class="small-title">
+                THE SWAN STORE
+            </p>
+
+            <h1>
+                ELEVATE<br>
+                YOUR STYLE
+            </h1>
+
+            <p class="hero-description">
+                Discover pieces that express your own story.
+            </p>
+
+            <a href="#shop" class="main-btn">
+                KHÁM PHÁ NGAY
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= INTRO ================= -->
+
+    <section class="intro">
+
+        <p class="section-label">
+            WELCOME TO THE SWAN
+        </p>
+
+        <h2>
+            Simple. Elegant.<br>
+            Uniquely You.
+        </h2>
+
+        <p>
+            The Swan Store mang đến những thiết kế thời trang
+            hiện đại, tinh tế và dễ dàng thể hiện cá tính riêng.
+        </p>
+
+    </section>
+
+
+    <!-- ================= SHOP ================= -->
+
+    <section class="shop" id="shop">
+
+        <div class="section-heading">
+
+            <div>
+
+                <p class="section-label">
+                    OUR SELECTION
+                </p>
+
+                <h2>
+                    Sản phẩm nổi bật
+                </h2>
+
+            </div>
+
+            <a href="#shop" class="view-all">
+                XEM TẤT CẢ →
+            </a>
+
+        </div>
+
+
+        <div class="products" id="product-list">
+
+
+            <!-- PRODUCT 1 -->
+
+            <article class="product-card">
+
+                <div class="product-image product-1">
+
+                    <span class="new-tag">
+                        NEW
+                    </span>
+
+                    <button
+                        class="quick-add"
+                        onclick="addToCart('Swan Top', 390000)"
+                    >
+                        + Thêm vào giỏ
+                    </button>
+
+                </div>
+
+                <div class="product-info">
+
+                    <h3>Swan Top</h3>
+
+                    <p>
+                        390.000 VNĐ
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUCT 2 -->
+
+            <article class="product-card">
+
+                <div class="product-image product-2">
+
+                    <button
+                        class="quick-add"
+                        onclick="addToCart('Swan Dress', 590000)"
+                    >
+                        + Thêm vào giỏ
+                    </button>
+
+                </div>
+
+                <div class="product-info">
+
+                    <h3>Swan Dress</h3>
+
+                    <p>
+                        590.000 VNĐ
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUCT 3 -->
+
+            <article class="product-card">
+
+                <div class="product-image product-3">
+
+                    <span class="new-tag">
+                        BEST SELLER
+                    </span>
+
+                    <button
+                        class="quick-add"
+                        onclick="addToCart('Swan Skirt', 450000)"
+                    >
+                        + Thêm vào giỏ
+                    </button>
+
+                </div>
+
+                <div class="product-info">
+
+                    <h3>Swan Skirt</h3>
+
+                    <p>
+                        450.000 VNĐ
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUCT 4 -->
+
+            <article class="product-card">
+
+                <div class="product-image product-4">
+
+                    <button
+                        class="quick-add"
+                        onclick="addToCart('Swan Shirt', 420000)"
+                    >
+                        + Thêm vào giỏ
+                    </button>
+
+                </div>
+
+                <div class="product-info">
+
+                    <h3>Swan Shirt</h3>
+
+                    <p>
+                        420.000 VNĐ
+                    </p>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= COLLECTION ================= -->
+
+    <section class="collection" id="collection">
+
+        <div class="collection-content">
+
+            <p class="section-label">
+                NEW COLLECTION
+            </p>
+
+            <h2>
+                THE SWAN<br>
+                ESSENTIALS
+            </h2>
+
+            <p>
+                Những thiết kế tối giản dành cho phong cách
+                hiện đại và tự tin mỗi ngày.
+            </p>
+
+            <a href="#shop" class="outline-btn">
+                KHÁM PHÁ BỘ SƯU TẬP
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="about" id="about">
+
+        <div class="about-image"></div>
+
+        <div class="about-content">
+
+            <p class="section-label">
+                OUR STORY
+            </p>
+
+            <h2>
+                THE SWAN STORE
+            </h2>
+
+            <p>
+                The Swan Store được xây dựng với mong muốn
+                tạo ra một không gian thời trang nơi mỗi người
+                có thể tìm thấy những sản phẩm phù hợp với
+                phong cách và cá tính của riêng mình.
+            </p>
+
+            <p>
+                Chúng tôi tin rằng thời trang không chỉ là
+                quần áo. Đó là cách bạn kể câu chuyện về chính mình.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= INSTAGRAM ================= -->
+
+    <section class="instagram">
+
+        <p class="section-label">
+            FOLLOW OUR JOURNEY
+        </p>
+
+        <h2>
+            @theswan.storee
+        </h2>
+
+        <div class="instagram-grid">
+
+            <div class="ig-item ig-1"></div>
+            <div class="ig-item ig-2"></div>
+            <div class="ig-item ig-3"></div>
+            <div class="ig-item ig-4"></div>
+
+        </div>
+
+        <a
+            href="https://www.instagram.com/theswan.storee/"
+            target="_blank"
+            class="main-btn"
+        >
+            FOLLOW INSTAGRAM
+        </a>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section class="contact" id="contact">
+
+        <div>
+
+            <p class="section-label">
+                GET IN TOUCH
+            </p>
+
+            <h2>
+                Let's connect.
+            </h2>
+
+        </div>
+
+        <div class="contact-info">
+
+            <p>
+                Instagram
+            </p>
+
+            <a
+                href="https://www.instagram.com/theswan.storee/"
+                target="_blank"
+            >
+                @theswan.storee
+            </a>
+
+            <p>
+                Email
+            </p>
+
+            <a href="mailto:hello@theswanstore.com">
+                hello@theswanstore.com
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-logo">
+            THE SWAN
+        </div>
+
+        <p>
+            Fashion made for your story.
+        </p>
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 The Swan Store
+            </span>
+
+            <span>
+                All rights reserved.
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= CART ================= -->
+
+    <div class="cart-overlay" id="cartOverlay">
+
+        <div class="cart-panel">
+
+            <div class="cart-header">
+
+                <h2>
+                    Giỏ hàng
+                </h2>
+
+                <button onclick="closeCart()">
+                    ✕
+                </button>
+
+            </div>
+
+            <div id="cart-items">
+
+                <p class="empty-cart">
+                    Giỏ hàng đang trống.
+                </p>
+
+            </div>
+
+            <div class="cart-total">
+
+                <span>
+                    Tổng cộng
+                </span>
+
+                <strong id="cart-total">
+                    0 VNĐ
+                </strong>
+
+            </div>
+
+            <button class="checkout-btn">
+                TIẾN HÀNH ĐẶT HÀNG
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
